@@ -13,33 +13,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Peso">
+        android:hint="@string/weight_hint">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/weight_edit_text"
             android:layout_width="match_parent"
-            android:inputType="number"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/date_text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/date_dd_mm_yyyy_hint"
+        app:endIconDrawable="@drawable/ic_baseline_calendar_today_24"
+        app:endIconMode="custom">
 
-
-    <ImageView
-        android:id="@+id/photo_image_view"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp"
-        android:background="#c2c2c2" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/date_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="date" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/register_weight_photo_button"
+        android:id="@+id/save_weight_button"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:minWidth="240dp"
-        android:text="Registrar" />
+        android:text="@string/register" />
 
 </LinearLayout>
