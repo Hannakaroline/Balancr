@@ -2,7 +2,7 @@ package com.hanna.balancr.model.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.sql.Date
+import java.util.*
 
 @Entity(tableName = "body_pictures")
 data class BodyPicture(
