@@ -17,5 +17,7 @@ data class User(
     val email: String,
     @ColumnInfo(name = "password")
     val password: String,
+    val name: String,
+    val height: Float,
     val isLoggedIn: Boolean
 )
