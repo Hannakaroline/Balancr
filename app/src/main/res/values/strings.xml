@@ -2,4 +2,9 @@
     <string name="app_name">balancr</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
+    <string name="title_weightings">Pesagens</string>
+    <string name="title_add_weighting">Registrar peso</string>
+    <string name="title_body_pictures">Histórico corporal</string>
+    <string name="title_add_body_picture">Adicionar Foto</string>
+    <string name="login">Login</string>
 </resources>
