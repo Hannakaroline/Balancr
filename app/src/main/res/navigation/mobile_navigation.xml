@@ -3,18 +3,60 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_weighting">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_weighting"
         android:name="com.hanna.balancr.ui.weight.WeightingsFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_weightings" />
+        android:label="@string/title_weightings"
+        tools:layout="@layout/fragment_weightings">
+        <action
+            android:id="@+id/action_add_weighting"
+            app:destination="@id/navigation_add_weighting" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_add_weighting"
+        android:name="com.hanna.balancr.ui.weight.add.AddWeightingFragment"
+        android:label="@string/title_add_weighting"
+        tools:layout="@layout/fragment_register_weight" />
+
+    <fragment
+        android:id="@+id/navigation_body_pictures"
         android:name="com.hanna.balancr.ui.pictures.BodyPicturesFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_body_pictures" />
+        android:label="@string/title_body_pictures"
+        tools:layout="@layout/fragment_body_pictures">
+        <action
+            android:id="@+id/action_add_body_picture"
+            app:destination="@id/navigation_add_body_picture" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_add_body_picture"
+        android:name="com.hanna.balancr.ui.pictures.add.AddBodyPictureFragment"
+        android:label="@string/title_add_body_picture"
+        tools:layout="@layout/fragment_add_body_picture" />
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.hanna.balancr.ui.login.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_fragment_to_register_fragment"
+            app:destination="@id/sign_up_graph" />
+    </fragment>
+
+    <navigation
+        android:id="@+id/sign_up_graph"
+        app:startDestination="@id/sign_up_fragment">
+
+        <fragment
+            android:id="@+id/sign_up_fragment"
+            android:name="com.hanna.balancr.ui.sign_up.SignUpFragment"
+            android:label="@string/sign_up_label"
+            tools:layout="@layout/fragment_sign_up" />
+
+    </navigation>
 
 </navigation>
