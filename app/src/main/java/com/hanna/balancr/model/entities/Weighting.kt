@@ -1,15 +1,14 @@
 package com.hanna.balancr.model.entities
 
-import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.Index
 import androidx.room.PrimaryKey
-import java.sql.Date
+import java.util.*
 
 @Entity(tableName = "weightings")
 data class Weighting(
    @PrimaryKey(autoGenerate = true)
    val id: Long = 0,
    val weight: Float,
-   val date: Date
+   val date: Date,
+   val userId: Long
 )
