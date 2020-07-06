@@ -1,7 +1,8 @@
 package com.hanna.balancr.model
 
 import androidx.room.TypeConverter
-import java.sql.Date
+import java.util.*
+
 
 class Converters {
     @TypeConverter
